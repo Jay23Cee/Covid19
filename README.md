@@ -1,14 +1,17 @@
-I CONVERTED THIS TO A COVID-19 API using FLASK
+Currently Using Flask.
+Using Python to retrieve Data from API and sending it to Json.
+Have a link to a  second  Html file. Currently calling it Graph.
+Have a table (homepage) and a plotly bar char (graph) currently working.. 
 
-I currently got the graph.html working.
-i am able to have a graph be uploaded on the the html using python flask.
-Just got an API working regarding US data sets.  ( not exactly what I intended.)4
+There's old files from a previous Flask project that needs to be removed and clean. 
 
-need to get data from COUNTRY and do a graph comparison with them.
+Problems:
+1) Unable to have a seperate Javascript file because it doesn't recognize the jinja2 template. (SOLUTION: Writing inside the HTML file with a script. One of the disadvantages of using this is the data being receive can be view in 'source code'. )
 
-We can include a domestic data / graph set after I finish with this world data first.
+2)  Needs better Styling. Probably will use a bootstrap/Dash. 
 
-Needs a Domestic.HTML if that's what we are planning to do.For now the graph data has a working API for that.
 
-Needs to use better CSS on both Home page. Graph Page and Domestic. 
+3/29/2020
+
+
 
