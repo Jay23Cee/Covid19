@@ -1,0 +1,77 @@
+{% extends 'base.html' %}
+
+
+{% block head %}
+<title>COVID-19 Graph</title>  `
+{% endblock head %}
+
+{% block body %}
+<a href="/">Back</a>
+
+<div class="content">
+    <h1 style="text-align: center">COVID-19 Graph</h1>
+
+   
+
+    <div id='myDiv' ><!-- Plotly chart will be drawn inside this DIV --></div>
+    <p id="test"></p>
+    <p id="test1"></p>
+
+    <script>
+
+
+//var b = JSON.parse(JSON.stringify('{{ a | tojson | safe}}'));
+var b = JSON.parse('{{ a | tojson | safe}}');
+        document.getElementById('test').innerHTML =b;
+        document.getElementById('test1').innerHTML = b[1];
+        console.log(b['cases']);
+
+// document.getElementById('username').innerHTML = user.firstname + " " +
+    //         user.lastname;
+
+  var trace1 = {
+  x: b['country'],
+  y: b['cases'],
+   name: 'Cases',
+  type: 'bar'
+ };
+
+ var trace2 = {
+  x: b['country'],
+  y: b['recover'],
+   name: 'Recover',
+  type: 'bar'
+ };
+
+var data = [trace1, trace2];
+
+
+
+ var layout = {
+        barmode: 'stack',
+        autosize: false,
+        width: 500,
+        height: 500,
+        margin: {
+            l: 50,
+            r: 50,
+            b: 100,
+            t: 100,
+            pad: 4
+        },
+        paper_bgcolor: '#7f7f7f',
+        plot_bgcolor: '#c7c7c7'
+        };;
+       
+        Plotly.newPlot('myDiv', data, layout);
+
+    </script>
+
+    </div>
+
+
+
+   
+
+</div>
+{% endblock %}

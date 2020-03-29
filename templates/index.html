@@ -1,0 +1,107 @@
+{% extends 'base.html' %} 
+
+
+
+{% block head %}
+
+<head>
+    <meta charset='utf-8'>
+    <meta http-equiv='X-UA-Compatible' content='IE=edge'>
+    <link href="https://fonts.googleapis.com/css?family=Montserrat|Roboto|Roboto+Mono&display=swap" rel="stylesheet">
+    <title>COVID-19 TRACKER.</title>
+    <meta name='viewport' content='width=device-width, initial-scale=1'>
+  
+    <link rel="stylesheet"  type="text/css" href="{{ url_for('static',  filename = 'css/main.css')}}">
+    <script rel="stylesheet"  type="javascript" href="{{ url_for('static',  filename = 'js/main.css')}}"></script>
+
+
+    
+</head>
+<title> TASK MASTER</title>
+{% endblock head %}
+
+
+{%  block body %}
+
+<a href="/Graph">GRAPH</a>
+<div class="wrapped">
+<div class="heros">
+    <p> HEROS</p>
+</div>
+
+<div class="testing">
+    <p> testing</p>
+</div>
+
+<div class="heros">
+    <p> HEROS</p>
+</div>
+
+<div class="testing">
+    <p> testing</p>
+</div>
+
+
+<div class='myDiv' id='myDiv' ><!-- Plotly chart will be drawn inside this DIV -->
+
+
+</div>
+
+</div>
+
+<script>
+
+var b = JSON.parse('{{ a | tojson | safe}}');
+console.log(b['cases']);
+
+var values = [
+b['country'],
+b['cases'],
+b['recover'],
+b['death'],
+b['new_death'],
+b["serious_critical"]
+]
+
+var data = [{
+type: 'table',
+header: {
+values: [[['Country']],['Cases'], [['Recover']],
+       ["Death"], ["New Deaths"], ["serious critical"]],
+align: "center",
+line: {width: 1, color: 'black'},
+fill: {color: "grey"},
+font: {family: "Arial", size: 12, color: "white"}
+},
+
+cells: {
+values: values,
+align: "center",
+line: {color: "black", width: 1},
+fill:{color : [['white'], ['lightgrey'], ['white'], ['lightgrey'], ['white'], ['lightgrey']]},
+font: {family: "Arial", size: 11, color: ["black"]}
+}
+}]
+
+var layout = {
+        barmode: 'stack',
+        autosize: false,
+        width: 950,
+        height: 650,
+        margin: {
+            l:0,
+            r:0,
+            b: 0,
+            t: 0,
+            pad: 4
+        },
+        paper_bgcolor: '#7f7f7f',
+        plot_bgcolor: '#c7c7c7'
+        };;
+
+Plotly.newPlot('myDiv', data, layout);
+
+
+</script>
+
+    {%  endblock body  %}
