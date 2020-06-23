@@ -14,7 +14,6 @@ import plotly
 from flask import Markup
 
 
-
 import matplotlib
 matplotlib.use('Agg')
 import matplotlib.pyplot as plt
@@ -93,11 +92,24 @@ class search():
             
             value = int( i['cases'].replace(',', ''))    #['countries_stat']:
             death_value = int( i['deaths'].replace(',', ''))   # Converting the str into Int
-            total_recovered_value = int( i['total_recovered'].replace(',', '')) # Converting the str into Int
+           # total_recovered_value = int( i['total_recovered'].replace(',', '')) # Converting the str into Int
+
+            if (i['total_recovered'] == "N/A"):
+                total_recovered_value = "N/A"
+            else:total_recovered_value = int(i['total_recovered'].replace(',', '')) # Converting the str into Int
+            
+
+
+
             new_death=int( i['new_deaths'].replace(',', ''))
             new_cases=int( i['new_cases'].replace(',', ''))
             serious_critical=int( i['serious_critical'].replace(',', ''))
-            active_cases=int( i['active_cases'].replace(',', ''))
+           # 
+            if (i['total_recovered'] == "N/A"):
+               active_cases = "N/A"
+            else:
+               active_cases=int( i['active_cases'].replace(',', ''))
+
             total_case_per_1m_population=float( i['total_cases_per_1m_population'].replace(',', ''))
 
 
