@@ -58,7 +58,9 @@ body{
 
 .world-map{
     display: inline-block;
-    
+    width: 85vh;
+    height: 20em;
+    margin-left: 2em;
     
     grid-row-start: 1;
     grid-row-end: 2;
