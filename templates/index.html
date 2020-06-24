@@ -127,6 +127,7 @@ var data = [{
         locations: values[0],// COUNTRIES NAME
         z: values[1], // CASES BY COUTRY
         text:text ,
+        
         autocolorscale: true
 
        
@@ -136,10 +137,20 @@ var data = [{
 
     var layout = {
       title: 'Covid',
+      
       geo: {
           projection: {
               type: 'robinson'
-          }
+          },
+       
+
+          margin: {
+            l: 0,
+            r: 0,
+            b: 0,
+            t: 0,
+            pad: 1
+        }
       }
     };
 

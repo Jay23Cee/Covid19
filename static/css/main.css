@@ -42,11 +42,28 @@ body{
 
 .wrapped{
     display: grid;
-    grid-template-columns: 1fr;
-    grid-template-rows: repeat(3, 15em) ;
+    grid-template-columns: repeat(3 , 20em);
+    grid-template-rows: repeat(2, 21em) ;
     height: 40%;
     width:100%;
-    background:red;
+    background:blue;
+  
+  
+    
 
 
+}
+
+
+.world-map{
+    width: 80vh;
+    height: 20em;
+    padding-left: 5em;
+    grid-row-start: 1;
+    grid-row-end: 2;
+}
+
+.myDiv{
+    grid-row-start: 2;
+    grid-row-end: 3;
 }
