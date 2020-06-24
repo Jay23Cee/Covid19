@@ -22,9 +22,9 @@
 
 //var b = JSON.parse(JSON.stringify('{{ a | tojson | safe}}'));
 var b = JSON.parse('{{ a | tojson | safe}}');
-        document.getElementById('test').innerHTML =b;
+        document.getElementById('test').innerHTML =b['country'];
         document.getElementById('test1').innerHTML = b[1];
-        console.log(b['cases']);
+        console.log("I'm here haha':: "+ b['cases'][0]);
 
 // document.getElementById('username').innerHTML = user.firstname + " " +
     //         user.lastname;
@@ -43,15 +43,16 @@ var b = JSON.parse('{{ a | tojson | safe}}');
   type: 'bar'
  };
 
-var data = [trace1, trace2];
+var data = [trace2, trace1];
 
 
 
  var layout = {
-        barmode: 'stack',
+        barmode: 'group',
         autosize: false,
         width: 500,
         height: 500,
+        yaxis: {'title': 'Population'},
         margin: {
             l: 50,
             r: 50,

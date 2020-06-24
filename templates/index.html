@@ -11,13 +11,13 @@
     <title>COVID-19 TRACKER.</title>
     <meta name='viewport' content='width=device-width, initial-scale=1'>
   
-    <link rel="stylesheet"  type="text/css" href="{{ url_for('static',  filename = 'css/main.css')}}">
+    <link rel="stylesheet"  type="text/css" href="{{ url_for('static',  filename = 'css/main.css')}}" >
     <script rel="stylesheet"  type="javascript" href="{{ url_for('static',  filename = 'js/main.css')}}"></script>
 
 
     
 </head>
-<title> TASK MASTER</title>
+<title> Covid-19 Data</title>
 {% endblock head %}
 
 
@@ -25,49 +25,59 @@
 
 <a href="/Graph">GRAPH</a>
 <div class="wrapped">
-<div class="heros">
-    <p> HEROS</p>
+<!-- <div class="heros">
+    <p> News</p>
 </div>
 
 <div class="testing">
-    <p> testing</p>
+    <p> Where to get Tested</p>
 </div>
 
 <div class="heros">
-    <p> HEROS</p>
+    <p> ...</p>
 </div>
 
 <div class="testing">
-    <p> testing</p>
+    <p> ...</p>
+</div> -->
+
+
+<div class='myDiv' id='myDiv'  ><!-- Plotly chart will be drawn inside this DIV -->
 </div>
 
 
-<div class='myDiv' id='myDiv' ><!-- Plotly chart will be drawn inside this DIV -->
-
-
+<div class='world-map' id='world-map'  ><!-- Plotly chart will be drawn inside this DIV -->
 </div>
+
 
 </div>
 
 <script>
 
 var b = JSON.parse('{{ a | tojson | safe}}');
-console.log(b['cases']);
 
+console.log( )
+let text = []
+for (var i =0 ; i< b['country'].length; i++){
+    text[i]= "Cases: "+b['cases'][i]+ "<br>"+"Recover:"+ b['recover'][i]+ "<br>"+"Death: "+b["death"][i];
+}
+
+// GETTING Data for Table 
 var values = [
 b['country'],
 b['cases'],
 b['recover'],
 b['death'],
-b['new_death'],
-b["serious_critical"]
+
+// b['new_death'],
+// b["serious_critical"]
 ]
 
 var data = [{
 type: 'table',
 header: {
-values: [[['Country']],['Cases'], [['Recover']],
-       ["Death"], ["New Deaths"], ["serious critical"]],
+values: [['Country'],['Cases'], [['Recover']],
+       ["Death"]],// ["New Deaths"], ["serious critical"]],
 align: "center",
 line: {width: 1, color: 'black'},
 fill: {color: "grey"},
@@ -86,8 +96,8 @@ font: {family: "Arial", size: 11, color: ["black"]}
 var layout = {
         barmode: 'stack',
         autosize: false,
-        width: 950,
-        height: 650,
+         width: 400,
+        height:250,
         margin: {
             l:0,
             r:0,
@@ -101,6 +111,42 @@ var layout = {
 
 Plotly.newPlot('myDiv', data, layout);
 
+
+
+
+// Getting data for World-map
+Plotly.d3.csv('https://raw.githubusercontent.com/plotly/datasets/master/2010_alcohol_consumption_by_country.csv', function(err, rows){
+      function unpack(rows, key) {
+          return rows.map(function(row) { return row[key]; });
+      }
+
+
+var data = [{
+        type: 'choropleth',
+        locationmode: 'country names',
+        locations: values[0],// COUNTRIES NAME
+        z: values[1], // CASES BY COUTRY
+        text:text ,
+        autocolorscale: true
+
+       
+        
+    }];
+   
+
+    var layout = {
+      title: 'Covid',
+      geo: {
+          projection: {
+              type: 'robinson'
+          }
+      }
+    };
+
+    Plotly.newPlot("world-map", data, layout, {showLink: false});
+
+
+})
 
 </script>
 

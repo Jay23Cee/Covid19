@@ -23,7 +23,7 @@ import numpy as np
 @routes.route('/Graph')
 def Graph():
 
-    points = show()
+    points = top_five()
 
     print(points)
     return render_template('graph.html', a= points )
@@ -37,7 +37,7 @@ def Graph():
 # Data for plotting
 
 # @show.route("/graph")
-def show():
+def top_five():
     
 
     data = search.get_data()
@@ -216,7 +216,8 @@ class search():
                 'new_cases':new_cases,
                 'serious_critical':serious_critical,
                 'active_cases':active_cases,
-                'total_case_per_1m_population':total_case_per_1m_population
+                'total_case_per_1m_population':total_case_per_1m_population,
+              
             }
         
 

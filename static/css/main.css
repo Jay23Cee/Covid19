@@ -6,14 +6,17 @@
     
 }
 body{
-    background-color: #1e88e5;
+    background-color: #000000;
 }
-.wrapper{
-    width: 80%;
+/* .wrapper{
+    width: 100vh;
     position: absolute;
     left: 50%;
     transform: translateX(-50%);
-}
+    display:grid;
+    grid-template-rows: repeat(3,12em);
+    
+} */
 .statistic{
     width: 100%;
 }
@@ -30,73 +33,17 @@ body{
 .total_case_box p{
     font-size: 3rem;
 }
-.wrapper .box_wrapper{
-    display: flex;
-    flex-wrap: nowrap;
-    flex-direction: row;
-}
-
-.box_wrapper .box{
-    background-color: #fafafa;
-    box-shadow: 2px 2px 8px rgba(30,30,30,.2);
-    margin: 10px 15px;
-    width:25%;
-    text-align: center;
-    padding: 15px 0;
-    border-radius: 8px;
-    text-transform: uppercase;
-}
-.box_wrapper .box p{
-    font-size: 2.5rem;
-}
-
-
-/*Styiling the table*/
-table{
-    width: 100%;
-    padding: 15px 10px;
-    margin: 10px 0;
-    text-align: center;
-    border-spacing: 0;
-}
-tr:first-child{
-    background-color: #37474f;
-    color: #fafafa;
-    text-transform: uppercase;
-}
-th{
-    padding: 15px 0;
-    border: none;
-    border-spacing: 0;
-    
-}
-tr:nth-child(even){
-    background-color: #fafafa;
-    
-    
-}
-tr:nth-child(odd){
-    background-color: #424242;
-    color: #fafafa;
-}
-tr td{
-    padding: 15px 0;
-    
-    
-}
 
 
 
-.heros{
-    background:green;
-    width: 10em;
-    height: 3em;
-}
+
+
+
 
 .wrapped{
     display: grid;
-    grid-template-columns: 1fr 1fr 2fr 2fr;
-    grid-template-rows: auto auto auto auto;  
+    grid-template-columns: 1fr;
+    grid-template-rows: repeat(3, 15em) ;
     height: 40%;
     width:100%;
     background:red;
