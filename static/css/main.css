@@ -42,11 +42,12 @@ body{
 
 .wrapped{
     display: grid;
-    grid-template-columns: repeat(3 , 20em);
+    grid-template-columns: repeat(1, 35em);
     grid-template-rows: repeat(2, 21em) ;
     height: 40%;
     width:100%;
     background:blue;
+    row-gap: 0.5em;
   
   
     
@@ -56,14 +57,17 @@ body{
 
 
 .world-map{
-    width: 80vh;
-    height: 20em;
-    padding-left: 5em;
+    display: inline-block;
+    
+    
     grid-row-start: 1;
     grid-row-end: 2;
+    align-items: center;
+    align-content: center;
 }
 
 .myDiv{
     grid-row-start: 2;
     grid-row-end: 3;
+    margin-left: 8em;
 }
