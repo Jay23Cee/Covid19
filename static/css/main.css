@@ -49,6 +49,8 @@ body{
     background:blue;
     row-gap: 0.5em;
   
+
+
   
     
 
@@ -58,7 +60,7 @@ body{
 
 .world-map{
     display: inline-block;
-    width: 85vh;
+    width: 30em;
     height: 20em;
     margin-left: 2em;
     
@@ -66,10 +68,57 @@ body{
     grid-row-end: 2;
     align-items: center;
     align-content: center;
+
+
+  
 }
 
 .myDiv{
     grid-row-start: 2;
     grid-row-end: 3;
-    margin-left: 8em;
+    margin-left: 6.5em;
+}
+
+
+
+.header{
+    display:grid;
+    grid-template-columns: repeat(1, 20em);
+    grid-template-rows: repeat(2, 4em);
+
+}
+
+.menu-bar{
+    display: flex;
+    position: fixed;
+    background:black;
+    width:35em;
+    z-index:2;
+    padding-left: 1.5em;
+    padding-bottom: 0.5em;
+    
+
+    border-radius: 0px 0px 21px 21px;
+    -moz-border-radius: 0px 0px 21px 21px;
+    -webkit-border-radius: 0px 0px 21px 21px;
+    border: 0px solid #000000;
+   
+}
+
+
+
+
+.menu-bar a{
+    flex:1;
+   
+}
+
+.banner{
+    display:inline;
+    position: absolute;
+    grid-row-start: 1;
+    grid-row-end: 2;
+    background:yellow;
+    z-index: 3;
+
 }
