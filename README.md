@@ -17,4 +17,23 @@ Problems:
 3/29/2020
 
 
+---------------------
+
+Need to adjust a responsive design.
+
+Saas has been added.
+
+need to get plotly table adjusted inside grid.
+
+need to get globe size bigger.
+
+adjust header > banner text.
+
+menu will need to be a nav. 
+
+could have globe change to different data graphs.
+
+6/25/2020
+
+
 
