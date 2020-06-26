@@ -1,0 +1,56 @@
+.header{
+
+    background: #5455FF;
+    background: -moz-radial-gradient(center, #5455FF 0%, #F21111 10%, #000000 100%);
+    background: -webkit-radial-gradient(center, #5455FF 0%, #F21111 10%, #000000 100%);
+    background: radial-gradient(ellipse at center, #5455FF 0%, #F21111 10%, #000000 100%);
+
+display: grid;
+grid-template-columns: repeat(3,33%);
+grid-template-rows: repeat(2, 2.6em);
+
+height:4em;
+
+
+}
+
+
+.banner{
+    display:inline;
+
+   
+    
+    
+    align-self: center;
+    align-content: center;;
+
+    grid-row-start: 1;
+    grid-row-end: 2;
+
+    grid-column-start: 2;
+    grid-column-end: 4;
+
+    z-index: 3;
+
+   
+
+
+    font-family: "Trebuchet MS", Helvetica, sans-serif;
+    font-size: 40px;
+    letter-spacing: 6px;
+    word-spacing: 6px;
+    color: #000000;
+    font-weight: 700;
+    text-decoration: none;
+    font-style: normal;
+    font-variant: normal;
+    text-transform: none;
+
+
+
+
+    color: #000000;
+    
+    text-shadow: 2px 2px 0 #4074b5, 2px -2px 0 #4074b5, -2px 2px 0 #4074b5, -2px -2px 0 #4074b5, 2px 0px 0 #4074b5, 0px 2px 0 #4074b5, -2px 0px 0 #4074b5, 0px -2px 0 #4074b5;
+
+}

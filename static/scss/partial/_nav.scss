@@ -1,0 +1,69 @@
+.menu-bar{
+
+    
+    
+    grid-template-rows: repeat(3,8vh);
+
+    width:20%;
+
+    display:none;
+}
+
+
+
+.menu-bar{
+    display: none;
+
+    .is-open{ 
+            position: fixed;
+            background:rgb(255, 153, 0);
+            width:60%;
+            z-index:5;
+            padding-left: 1.5em;
+            padding-bottom: 0.5em;
+            top: .3;
+            
+
+            border-radius: 0px 0px 21px 21px;
+            -moz-border-radius: 0px 0px 21px 21px;
+            -webkit-border-radius: 0px 0px 21px 21px;
+            border: 0px solid #000000;
+
+            grid-row-start: 2;
+            grid-row-end: 3;
+
+            border: 5px solid ;
+
+            background: #FF0606;
+            background: -moz-linear-gradient(top, #FF0606 0%, #FFFFFF 14%, #EDEDED 100%);
+            background: -webkit-linear-gradient(top, #FF0606 0%, #FFFFFF 14%, #EDEDED 100%);
+            background: linear-gradient(to bottom, #FF0606 0%, #FFFFFF 14%, #EDEDED 100%);
+
+    }
+    
+   
+}
+
+
+
+.menu-bar a{
+    flex:1;
+    color:black
+   
+}
+
+
+
+.menu-button {
+    width:100%;
+    height:20em;
+   background-image: url(/static/img/menu-icon.png);;
+
+   display: inline;
+ 
+
+
+   .is-open{
+       background-image: url(/static/img/x-icon.png);
+   }
+}

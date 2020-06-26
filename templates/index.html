@@ -22,15 +22,21 @@
 
 
 {%  block body %}
-
-<div class="menu-bar">
+<div class="menu">
+<button class="menu-button"></button>
+<div class="menu-bar is-open">
     <a href="/Graph">Top 5 Countrys</a>
     <a href="">United States</a>
     <a href="">Symptons</a>
     <a href="">Prevention</a>
 </div>
+</div>
+
 <div class="header">
-    <div class="banner">COVID-19</div>
+
+
+    
+         <div class="banner">COVID-19</div>
     </div>
 
 <div class="wrapped">
@@ -105,7 +111,8 @@ font: {family: "Arial", size: 11, color: ["black"]}
 var layout = {
         barmode: 'stack',
         autosize: false,
-         
+       
+         height:300,
         margin: {
             l:0,
             r:0,
