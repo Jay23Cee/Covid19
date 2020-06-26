@@ -1,0 +1,7 @@
+@mixin mq($width:768em){
+
+    @media(min-width: $width){
+        @content;
+    }
+
+}

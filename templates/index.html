@@ -22,16 +22,17 @@
 
 
 {%  block body %}
-<div class="header">
-<div class="banner">COVID-19</div>
+
 <div class="menu-bar">
     <a href="/Graph">Top 5 Countrys</a>
     <a href="">United States</a>
     <a href="">Symptons</a>
     <a href="">Prevention</a>
 </div>
+<div class="header">
+    <div class="banner">COVID-19</div>
+    </div>
 
-</div>
 <div class="wrapped">
 <!-- <div class="heros">
     <p> News</p>
@@ -50,7 +51,7 @@
 </div> -->
 
 
-<div class='myDiv' id='myDiv'  ><!-- Plotly chart will be drawn inside this DIV -->
+<div class='table-data' id='table-data'  ><!-- Plotly chart will be drawn inside this DIV -->
 </div>
 
 
@@ -104,8 +105,8 @@ font: {family: "Arial", size: 11, color: ["black"]}
 var layout = {
         barmode: 'stack',
         autosize: false,
-         width: 400,
-        height:250,
+        height:200,
+        width:250,
         margin: {
             l:0,
             r:0,
@@ -117,7 +118,7 @@ var layout = {
         plot_bgcolor: '#c7c7c7'
         };;
 
-Plotly.newPlot('myDiv', data, layout);
+Plotly.newPlot('table-data', data, layout);
 
 
 
@@ -144,7 +145,7 @@ var data = [{
    
 
     var layout = {
-      title: 'Covid',
+      title: 'Corona Virus World Map',
      
       geo: {
           projection: {
@@ -157,7 +158,7 @@ var data = [{
             r: 0,
             b: 0,
             t: 0,
-            pad: 1
+            pad: 4
         }
       }
     };
