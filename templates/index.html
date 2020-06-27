@@ -33,13 +33,13 @@
 
 
 <div class="header">
-    <div class="menu ">
+    <div class="menu" id='menu'>
         <button class="menu-button" onclick="Openmenu()">
         <img class= "button-img menu-icon"src="static\img\menu-icon.png" alt="menu-icon">
         <img class= "button-img close-icon"src="static\img\x-icon.png" alt="close-icon">
 
     </button> 
-        </div>
+     </div>
 
     
          <div class="banner">COVID-19</div>
@@ -184,11 +184,15 @@ function Openmenu() {
     if(menuopen){
         menuopen = false;
         document.getElementById('menu-bar').classList.remove('is-open');
+        document.getElementById('menu').classList.remove('open');
+
         console.log(menuopen);
     }
     else{
         menuopen=true;
         document.getElementById('menu-bar').classList.toggle('is-open');
+        document.getElementById('menu').classList.toggle('open');
+
         console.log(menuopen);
     }
 

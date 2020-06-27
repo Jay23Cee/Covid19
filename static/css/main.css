@@ -82,6 +82,20 @@ body {
   display: none;
 }
 
+.menu .close-icon {
+  display: none;
+}
+.menu .menu-icon {
+  display: block;
+}
+
+.open .close-icon {
+  display: block;
+}
+.open .menu-icon {
+  display: none;
+}
+
 .menu-bar a {
   flex: 1;
   color: black;
