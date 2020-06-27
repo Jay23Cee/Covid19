@@ -2,6 +2,7 @@
   margin: 0;
   padding: 0;
   outline: 0;
+  box-sizing: border-box;
   font-family: "Nunito", sans-serif;
 }
 
@@ -50,11 +51,14 @@ body {
 .menu-bar {
   display: none;
 }
-.menu-bar .is-open {
+
+.is-open {
+  display: inline;
   position: fixed;
   background: #ff9900;
   width: 60%;
   z-index: 5;
+  margin-left: 43%;
   padding-left: 1.5em;
   padding-bottom: 0.5em;
   top: 0.3;
@@ -76,14 +80,23 @@ body {
   color: black;
 }
 
-.menu-button {
-  width: 100%;
-  height: 20em;
-  background-image: url(/static/img/menu-icon.png);
-  display: inline;
+.menu {
+  position: absolute;
+  margin-top: 3.2vh;
+  margin-left: 10.5%;
 }
-.menu-button .is-open {
-  background-image: url(/static/img/x-icon.png);
+
+.menu-button {
+  width: 2.5em;
+  height: 2.5em;
+  background: none;
+  border: 0;
+}
+
+.button-img {
+  object-fit: cover;
+  width: 100%;
+  height: 100%;
 }
 
 .header {
@@ -93,7 +106,6 @@ body {
   background: radial-gradient(ellipse at center, #5455FF 0%, #F21111 10%, #000000 100%);
   display: grid;
   grid-template-columns: repeat(3, 33%);
-  grid-template-rows: repeat(2, 2.6em);
   height: 4em;
 }
 

@@ -22,18 +22,22 @@
 
 
 {%  block body %}
-<div class="menu">
-<button class="menu-button"></button>
-<div class="menu-bar is-open">
+
+
+<div class="menu-bar" id='menu-bar'>
     <a href="/Graph">Top 5 Countrys</a>
     <a href="">United States</a>
     <a href="">Symptons</a>
     <a href="">Prevention</a>
 </div>
-</div>
+
 
 <div class="header">
-
+    <div class="menu">
+        <button class="menu-button" onclick="Openmenu()">
+        <img class= "button-img"src="static\img\menu-icon.png" alt="menu-icon">
+        </button> 
+        </div>
 
     
          <div class="banner">COVID-19</div>
@@ -70,8 +74,8 @@
 <script>
 
 var b = JSON.parse('{{ a | tojson | safe}}');
+var menuopen = false;
 
-console.log( )
 let text = []
 for (var i =0 ; i< b['country'].length; i++){
     text[i]= "Cases: "+b['cases'][i]+ "<br>"+"Recover:"+ b['recover'][i]+ "<br>"+"Death: "+b["death"][i];
@@ -165,7 +169,10 @@ var data = [{
             b: 0,
             t: 0,
             pad: 4
-        }
+        },
+
+
+
       }
     };
 
@@ -173,6 +180,31 @@ var data = [{
 
 
 })
+
+
+
+
+
+
+
+
+
+function Openmenu() {
+    console.log('YAY CLICK');
+  
+
+    if(menuopen){
+        menuopen = false;
+        document.getElementById('menu-bar').classList.toggle('is-open');
+        console.log(menuopen);
+    }
+    else{
+        menuopen=true;
+        document.getElementById('menu-bar').classList.remove('is-open');
+        console.log(menuopen);
+    }
+
+}
 
 </script>
 
