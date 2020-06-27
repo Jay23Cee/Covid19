@@ -52,19 +52,19 @@ body{
 
 
 .table-data{
-   
- margin-left: 0;
 
     grid-row-start: 2;
     grid-row-end: 3;
-   
-    grid-column-start: 1;
-    grid-column-end: 3; 
-    
-   width:  100%;
+
+    margin-bottom: 5.5em;
+
+   max-height: 2vh;
+
+
+
+    align-items: center;
+    align-content: center;
+
   
-    margin-bottom: 15.5em;
-
-
  
 }

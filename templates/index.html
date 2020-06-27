@@ -35,8 +35,10 @@
 <div class="header">
     <div class="menu">
         <button class="menu-button" onclick="Openmenu()">
-        <img class= "button-img"src="static\img\menu-icon.png" alt="menu-icon">
-        </button> 
+        <img class= "button-img menu-icon"src="static\img\menu-icon.png" alt="menu-icon">
+        <img class= "button-img close-icon"src="static\img\x-icon.png" alt="close-icon">
+
+    </button> 
         </div>
 
     
@@ -44,29 +46,14 @@
     </div>
 
 <div class="wrapped">
-<!-- <div class="heros">
-    <p> News</p>
-</div>
-
-<div class="testing">
-    <p> Where to get Tested</p>
-</div>
-
-<div class="heros">
-    <p> ...</p>
-</div>
-
-<div class="testing">
-    <p> ...</p>
-</div> -->
 
 
-<div class='table-data' id='table-data'  ><!-- Plotly chart will be drawn inside this DIV -->
-</div>
+        <div class='table-data' id='table-data'  ><!-- Plotly chart will be drawn inside this DIV -->
+        </div>
 
 
-<div class='world-map' id='world-map'  ><!-- Plotly chart will be drawn inside this DIV -->
-</div>
+        <div class='world-map' id='world-map'  ><!-- Plotly chart will be drawn inside this DIV -->
+        </div>
 
 
 </div>
@@ -116,7 +103,8 @@ var layout = {
         barmode: 'stack',
         autosize: false,
        
-         height:300,
+         
+         width:333,
         margin: {
             l:0,
             r:0,
@@ -195,12 +183,12 @@ function Openmenu() {
 
     if(menuopen){
         menuopen = false;
-        document.getElementById('menu-bar').classList.toggle('is-open');
+        document.getElementById('menu-bar').classList.remove('is-open');
         console.log(menuopen);
     }
     else{
         menuopen=true;
-        document.getElementById('menu-bar').classList.remove('is-open');
+        document.getElementById('menu-bar').classList.toggle('is-open');
         console.log(menuopen);
     }
 

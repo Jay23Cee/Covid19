@@ -5,3 +5,28 @@
     }
 
 }
+
+
+@mixin get-menu-icon{
+
+    .close-icon{
+        display:none;
+      ;
+    }
+
+    .menu-icon{
+        display:block;
+    }
+}
+
+@mixin get-close-icon{
+
+    .close-icon{
+        display:block;
+      ;
+    }
+
+    .menu-icon{
+        display:none;
+    }
+}
