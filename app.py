@@ -38,25 +38,10 @@ class Todo(db.Model) :
 
 @app.route('/' , methods = ['POST', 'GET'])
 def index():
-    Table_json = search.get_json_all_data()
+    covid_data = search.get_json_all_data()
 
-    search.get_json_all_data()
-    if request.method =='POST':
-        task_content = request.form['content']
-        new_task = Todo(content = task_content)
-
-        # try:
-            
-        #     return redirect('/')
-        # except:
-            
-
-    else:
-        tasks = Todo.query.order_by(Todo.date_created).all()
         
-      #  return render_template('index.html', tasks=tasks)
-        
-        return render_template('index.html', a = Table_json)
+    return render_template('index.html', a = covid_data)
 
 # @app.route('/delete/<int:id>'  , methods = ['POST', 'GET'])
 # def delete(id):
