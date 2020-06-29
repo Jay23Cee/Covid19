@@ -14,10 +14,7 @@ import plotly
 from flask import Markup
 
 
-import matplotlib
-matplotlib.use('Agg')
-import matplotlib.pyplot as plt
-import numpy as np
+
 
 
 @routes.route('/Graph')
