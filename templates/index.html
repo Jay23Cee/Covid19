@@ -62,6 +62,8 @@
 
 var b = JSON.parse('{{ a | tojson | safe}}');
 var menuopen = false;
+var width_w = window.innerWidth;
+var height_w = window.innerHeight;
 
 let text = []
 for (var i =0 ; i< b['country'].length; i++){
@@ -99,12 +101,13 @@ font: {family: "Arial", size: 11, color: ["black"]}
 }
 }]
 
+
 var layout = {
         barmode: 'stack',
         autosize: false,
        
          
-         width:333,
+         width:width_w,
         margin: {
             l:0,
             r:0,
