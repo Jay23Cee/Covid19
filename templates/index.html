@@ -25,10 +25,10 @@
 
 
 <div class="menu-bar" id='menu-bar'>
-    <a href="/Graph">Top 5 Countrys</a>
-    <a href="">United States</a>
-    <a href="">Symptons</a>
-    <a href="">Prevention</a>
+    <a href="#">Top 5 Countrys</a>
+    <a href="#">United States</a>
+    <a href="#">Symptons</a>
+    <a href="#">Prevention</a>
 </div>
 
 
@@ -102,12 +102,16 @@ font: {family: "Arial", size: 11, color: ["black"]}
 }]
 
 
+var table_width = ( width_w*.85)
+console.log(table_width)
+
+
 var layout = {
         barmode: 'stack',
         autosize: false,
        
          
-         width:width_w,
+         width:table_width,
         margin: {
             l:0,
             r:0,

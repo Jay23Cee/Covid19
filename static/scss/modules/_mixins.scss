@@ -1,10 +1,12 @@
-@mixin mq($width:768em){
+
+@mixin mq($width:768px){
 
     @media(min-width: $width){
         @content;
     }
 
 }
+
 
 
 @mixin get-menu-icon{

@@ -13,6 +13,7 @@ body{
 
 }
 
+
 .wrapped{
     display: grid;
     grid-template-columns: repeat(1, 100%);
@@ -31,6 +32,11 @@ body{
     background: -webkit-linear-gradient(top, #FFFFFF 0%, #F2F2F2 50%, #FFFFFF 100%);
     background: linear-gradient(to bottom, #FFFFFF 0%, #F2F2F2 50%, #FFFFFF 100%);
 
+ 
+
+    @include mq{
+        grid-template-rows: repeat(2, 24em) ;
+    }
 
 }
 
@@ -58,8 +64,8 @@ body{
 
     margin-bottom: 5.5em;
 
-   max-height: 2vh;
-
+    max-height: 2vh;
+    margin-left: 8%;
 
 
     align-items: center;

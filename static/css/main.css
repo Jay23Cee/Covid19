@@ -24,6 +24,11 @@ body {
   background: -webkit-linear-gradient(top, #FFFFFF 0%, #F2F2F2 50%, #FFFFFF 100%);
   background: linear-gradient(to bottom, #FFFFFF 0%, #F2F2F2 50%, #FFFFFF 100%);
 }
+@media (min-width: 768px) {
+  .wrapped {
+    grid-template-rows: repeat(2, 24em);
+  }
+}
 
 .world-map {
   grid-row-start: 1;
@@ -37,6 +42,7 @@ body {
   grid-row-end: 3;
   margin-bottom: 5.5em;
   max-height: 2vh;
+  margin-left: 8%;
   align-items: center;
   align-content: center;
 }
