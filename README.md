@@ -1,4 +1,12 @@
-Currently Using Flask.
+Covid19
+
+Collecting data from a covid 19 world wide record api.
+Using that data to populate into. A map and table. 
+The table is on ascending order base on case number.
+
+
+
+Languages: Python, JavaScript Flask, Jinja
 Using Python to retrieve Data from API and sending it to Json.
 Have a link to a  second  Html file. Currently calling it Graph.
 Have a table (homepage) and a plotly bar char (graph) currently working.. 
@@ -18,30 +26,4 @@ Problems:
 
 
 ---------------------
-
-Need to adjust a responsive design.
-
-Saas has been added.
-
-need to get plotly table adjusted inside grid.
-
-need to get globe size bigger.
-
-adjust header > banner text.
-
-menu will need to be a nav. 
-
-could have globe change to different data graphs.
-
-6/25/2020
-
--------------
-
-2/26/2020
-Was able get a menu icon button working
-trying to swich the images between the menu icon to a close icon (and vice verse)
-
-
-
-
 
